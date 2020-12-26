@@ -242,4 +242,44 @@ let countries = [
     {name: 'Yemen', code: 'YE'}, 
     {name: 'Zambia', code: 'ZM'}, 
     {name: 'Zimbabwe', code: 'ZW'} 
-  ]
+  ];
+
+
+function initTable(){
+for(let i=0;i<countries.length;i++)
+addRowToTable(countries[i].name,countries[i].code);
+}
+function addRowToTable(nom,code){
+  // declaration etcreation des elements
+let tr=document.createElement("tr");
+let td1=document.createElement("td");
+let td2=document.createElement("td");
+let td3=document.createElement("td");
+let btn=document.createElement("button");
+// les liaisons
+tr.appendChild(td1);
+tr.appendChild(td2);
+tr.appendChild(td3);
+td3.appendChild(btn);
+//contenu
+td1.innerHTML=nom;
+td2.innerHTML=code;
+btn.innerHTML="supprimer";
+// liaison avec une balise qui se trouve dans le body
+document.getElementById("bodyTable").appendChild(tr);
+
+}
+initTable();
+function addPays(){
+  let nom=document.getElementById("nomInput");
+  let code=document.getElementById("codeInput");
+  if(nom.value=="" || code.value=="")
+  alert('veuillez remplir tous les champs');
+  else
+  {
+    //normalment, communiquer avec le serveur
+    addRowToTable(nom.value,code.value);
+    nom.value="";
+    code.value="";
+  }
+}

@@ -1,0 +1,75 @@
+*{
+    margin:0px;
+    padding:0px;
+    text-decoration: unset;
+    color: black;
+}
+header{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+header h1{
+    color:inherit;
+    padding: 50px;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+main{
+    display: flex;
+}
+main>section:first-child{
+width: 40%;
+text-align: center;
+}
+main>section:last-child{
+   width: 60%;
+   border-left: 1px solid gray;
+   padding-left: 20px;
+   text-align: center;
+    }
+main>section:first-child>h2,main>section:last-child>h2
+{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+main>section:first-child div{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    font-size: 20px;
+    margin: 10px 20px;
+    border: 0px;
+    border-bottom: 1px solid gray;
+}
+main>section:first-child button{
+    margin: 10px 40px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 0px;
+    border: 0px;
+    border-radius: 15px;
+}
+main>section:last-child button{
+    margin: 10px 40px;
+    font-size: 20px;
+    background-color: rgb(160, 23, 23);
+    color: white;
+    padding: 5px 15px;
+    border: 0px;
+    border-radius: 15px;
+}
+table{
+    width: 100%;
+    border-spacing: 0px;
+    font-size: 18px;
+}
+td,th{
+border: 1px solid black;
+}
+th{
+    text-transform: capitalize;
+}
